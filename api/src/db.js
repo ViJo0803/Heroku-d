@@ -74,28 +74,28 @@ const {
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
 
-Usuario.hasMany(Favoritos);
-Favoritos.belongsTo(Usuario);
+// Usuario.hasMany(Favoritos);
+// Favoritos.belongsTo(Usuario);
 
-Usuario.hasMany(Cuentas);
-Cuentas.belongsTo(Usuario);
+// Usuario.hasMany(Cuentas);
+// Cuentas.belongsTo(Usuario);
 
-Cuentas.hasMany(Comprar_monedas);
-Comprar_monedas.belongsTo(Cuentas);
+// Cuentas.hasMany(Comprar_monedas);
+// Comprar_monedas.belongsTo(Cuentas);
 
-Cuentas.hasMany(Transferencias, {
-  foreignKey: "origin",
-  sourceKey: "idcuentas",
-});
-Transferencias.belongsTo(Cuentas, {
-  foreignKey: "origin",
-  sourceKey: "idcuentas",
-});
+// Cuentas.hasMany(Transferencias, {
+//   foreignKey: "origin",
+//   sourceKey: "idcuentas",
+// });
+// Transferencias.belongsTo(Cuentas, {
+//   foreignKey: "origin",
+//   sourceKey: "idcuentas",
+// });
 
-Cuentas.hasMany(Pago_servicios);
-Pago_servicios.belongsTo(Cuentas);
+// Cuentas.hasMany(Pago_servicios);
+// Pago_servicios.belongsTo(Cuentas);
 
-Pago_servicios.belongsTo(Servicios);
+// Pago_servicios.belongsTo(Servicios);
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
