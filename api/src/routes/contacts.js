@@ -3,7 +3,7 @@ const {
   addContact,
   getContacts,
   getAllContacts,
-} = require("./Controllers/contacts");
+} = require("./Controllers/contacts.js");
 
 const router = Router();
 

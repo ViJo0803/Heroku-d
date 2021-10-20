@@ -1,4 +1,4 @@
-const { Favoritos, Usuario, Cuentas } = require("../../db");
+const { Favoritos, Usuario, Cuentas } = require("../../db.js");
 require("dotenv").config();
 
 async function addContact(req, res, next) {

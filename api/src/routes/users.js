@@ -4,7 +4,7 @@ const {
   getUser,
   updateUser,
   doTransfer,
-} = require("./Controllers/Users");
+} = require("./Controllers/Users.js");
 
 const router = Router();
 

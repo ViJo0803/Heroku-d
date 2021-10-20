@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { Usuario, Cuentas } = require("../../db");
+const { Usuario, Cuentas } = require("../../db.js");
 require("dotenv").config();
 
 function generarNumeroCuenta() {
@@ -15,7 +15,6 @@ function generarNumeroCuenta() {
 }
 
 async function createUser(req, res, next) {
-
   const {
     nombre,
     apellidos,
@@ -61,7 +60,6 @@ async function createUser(req, res, next) {
   res.send(usuarioCreado);
 }
 
-
 async function getUser(req, res, next) {
   try {
     const mail = req.query.mail;
@@ -78,7 +76,6 @@ async function getUser(req, res, next) {
 }
 
 async function updateUser(req, res, next) {
-
   const {
     idusuario,
     nombre,
@@ -120,4 +117,4 @@ async function updateUser(req, res, next) {
   res.send(user2);
 }
 
-module.exports = { createUser, getUser, updateUser};
+module.exports = { createUser, getUser, updateUser };
