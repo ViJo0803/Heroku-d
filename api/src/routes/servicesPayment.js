@@ -1,10 +1,8 @@
-const {Router}= require("express")
-const{ServPayment}= require("./Controllers/ServicesPayment.js")
+const { Router } = require("express");
+const { ServPayment } = require("./Controllers/ServicesPayment");
 
-const router= Router()
+const router = Router();
 
 router.post("/", ServPayment);
 
-
-
-module.exports=router;
+module.exports = router;
